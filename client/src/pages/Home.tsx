@@ -1,8 +1,10 @@
 import { Button } from "@/components/ui/button";
-import { MapPin, Phone, Mail, Instagram, ArrowRight, CheckCircle2 } from "lucide-react";
+import { ArrowRight, MapPin, CheckCircle2, Phone, Mail, Instagram } from "lucide-react";
 import { useState } from "react";
+import QualificationModal from "@/components/QualificationModal";
 
 export default function Home() {
+  const [isQualificationModalOpen, setIsQualificationModalOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
   const handleScroll = () => {
@@ -68,7 +70,10 @@ export default function Home() {
               </div>
 
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button className="bg-[#76993D] hover:bg-[#344D0E] text-white rounded-full px-8 py-6 text-lg flex items-center gap-2">
+                <Button 
+                  onClick={() => setIsQualificationModalOpen(true)}
+                  className="bg-[#76993D] hover:bg-[#344D0E] text-white rounded-full px-8 py-6 text-lg flex items-center gap-2"
+                >
                   Agende sua Consulta
                   <ArrowRight className="w-5 h-5" />
                 </Button>
@@ -257,7 +262,10 @@ export default function Home() {
               Entre em contato conosco e agende sua consulta de mapeamento inicial. Vagas limitadas para garantir atendimento exclusivo.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button className="bg-[#76993D] hover:bg-[#344D0E] text-white rounded-full px-8 py-6 text-lg">
+              <Button 
+                onClick={() => setIsQualificationModalOpen(true)}
+                className="bg-[#76993D] hover:bg-[#344D0E] text-white rounded-full px-8 py-6 text-lg"
+              >
                 Agendar Consulta
               </Button>
               <Button
@@ -355,6 +363,12 @@ export default function Home() {
           </div>
         </div>
       </footer>
+
+      {/* Qualification Modal */}
+      <QualificationModal 
+        isOpen={isQualificationModalOpen}
+        onClose={() => setIsQualificationModalOpen(false)}
+      />
     </div>
   );
 }
