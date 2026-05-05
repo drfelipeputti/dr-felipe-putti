@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, MapPin, CheckCircle2, Phone, Mail, Instagram } from "lucide-react";
 import { useState } from "react";
 import QualificationModal from "@/components/QualificationModal";
-import BeforeAfterCarousel from "@/components/BeforeAfterCarousel";
+
 
 export default function Home() {
   const [isQualificationModalOpen, setIsQualificationModalOpen] = useState(false);
@@ -230,42 +230,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      {/* Before and After Section */}
-      <section id="transformacoes" className="py-20 bg-gradient-to-b from-[#f7f9f3] to-white">
-        <div className="container">
-          <div className="text-center mb-16">
-            <h2 className="text-5xl md:text-6xl font-serif font-bold text-[#344D0E] mb-4">
-              Transformações Reais
-            </h2>
-            <p className="text-xl text-[#4A5F22] max-w-2xl mx-auto">
-              Conheça os resultados de pacientes que confiaram no nosso método. Cada transformação é uma história de dedicação e excelência.
-            </p>
-          </div>
 
-          <BeforeAfterCarousel
-            cases={[
-              {
-                id: 1,
-                title: "Executivo - Recuperou Performance",
-                subtitle: "Empresário, 45 anos - Medicina Esportiva",
-                results: "12 kg",
-                duration: "90 dias",
-                beforeImage: "https://d2xsxph8kpxj0f.cloudfront.net/310519663568685363/cH9bd3vdEswPP279KavXwa/before_1-bPNHNpWhyRnpHjSRYUo3n3.webp",
-                afterImage: "https://d2xsxph8kpxj0f.cloudfront.net/310519663568685363/cH9bd3vdEswPP279KavXwa/after_1-48dorH79fz29hLE8YP8zCr.webp",
-              },
-              {
-                id: 2,
-                title: "Profissional - Confiança Renovada",
-                subtitle: "Executiva, 40 anos - Estética e Performance",
-                results: "8 kg",
-                duration: "75 dias",
-                beforeImage: "https://d2xsxph8kpxj0f.cloudfront.net/310519663568685363/cH9bd3vdEswPP279KavXwa/before_2-2jVCkMtzdiBmGww7hmBZ5q.webp",
-                afterImage: "https://d2xsxph8kpxj0f.cloudfront.net/310519663568685363/cH9bd3vdEswPP279KavXwa/after_2-We7Gi4dLUsWLAoivDkbdHW.webp",
-              },
-            ]}
-          />
-        </div>
-      </section>
 
       {/* Benefícios Section */}
       <section className="py-20 bg-white">
