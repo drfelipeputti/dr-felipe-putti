@@ -44,6 +44,16 @@ export default function QualificationModal({ isOpen, onClose }: QualificationMod
     // Simular envio de dados
     console.log("Dados de qualificação:", formData);
     
+    // Rastrear evento Contact do Pixel da Meta
+    if (typeof window !== 'undefined' && (window as any).fbq) {
+      (window as any).fbq('track', 'Contact', {
+        content_name: 'Qualification Form Submitted',
+        content_type: 'form',
+        value: 0,
+        currency: 'BRL'
+      });
+    }
+    
     // Aqui você pode integrar com um serviço de backend ou API
     // Por enquanto, apenas mostramos a mensagem de sucesso
     setSubmitted(true);

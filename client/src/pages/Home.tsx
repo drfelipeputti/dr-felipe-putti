@@ -1,18 +1,74 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, MapPin, CheckCircle2, Phone, Mail, Instagram, Star } from "lucide-react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import QualificationModal from "@/components/QualificationModal";
 
+// Declarar fbq como global
+declare global {
+  interface Window {
+    fbq?: (action: string, event: string, data?: Record<string, unknown>) => void;
+  }
+}
 
 export default function Home() {
   const [isQualificationModalOpen, setIsQualificationModalOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [testimonialsTracked, setTestimonialsTracked] = useState(false);
 
   const handleScroll = () => {
     setIsScrolled(window.scrollY > 50);
+    
+    // Rastrear quando usuário rola até a seção de depoimentos
+    if (!testimonialsTracked) {
+      const testimonialsSection = document.getElementById('testimonials');
+      if (testimonialsSection) {
+        const rect = testimonialsSection.getBoundingClientRect();
+        if (rect.top < window.innerHeight && rect.bottom > 0) {
+          // Usuário está visualizando a seção de depoimentos
+          if (typeof window.fbq !== 'undefined') {
+            window.fbq('track', 'ViewContent', {
+              content_name: 'Testimonials Section',
+              content_type: 'section',
+              value: 0,
+              currency: 'BRL'
+            });
+            setTestimonialsTracked(true);
+          }
+        }
+      }
+    }
   };
 
-  window.addEventListener("scroll", handleScroll);
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [testimonialsTracked]);
+
+  const handleScheduleClick = (source: string) => {
+    setIsQualificationModalOpen(true);
+    // Rastrear clique em Lead
+    if (typeof window.fbq !== 'undefined') {
+      window.fbq('track', 'Lead', {
+        content_name: `Schedule Consultation - ${source}`,
+        content_type: 'button',
+        value: 0,
+        currency: 'BRL'
+      });
+    }
+  };
+
+  const handleMethodClick = (source: string) => {
+    document.getElementById('metodo')?.scrollIntoView({ behavior: 'smooth' });
+    // Rastrear clique em Content View
+    if (typeof window.fbq !== 'undefined') {
+      window.fbq('track', 'ViewContent', {
+        content_name: `Know the Method - ${source}`,
+        content_type: 'button',
+        value: 0,
+        currency: 'BRL'
+      });
+    }
+  };
 
   const testimonials = [
     {
@@ -92,7 +148,10 @@ export default function Home() {
             </a>
           </nav>
 
-          <Button className="bg-[#76993D] hover:bg-[#344D0E] text-white rounded-full px-6">
+          <Button 
+            onClick={() => handleScheduleClick('Header')}
+            className="bg-[#76993D] hover:bg-[#344D0E] text-white rounded-full px-6"
+          >
             Agendar Consulta
           </Button>
         </div>
@@ -128,7 +187,7 @@ export default function Home() {
 
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button 
-                  onClick={() => setIsQualificationModalOpen(true)}
+                  onClick={() => handleScheduleClick('Hero')}
                   className="bg-[#76993D] hover:bg-[#344D0E] text-white rounded-full px-8 py-6 text-lg flex items-center gap-2"
                 >
                   Agende sua Consulta
@@ -137,7 +196,7 @@ export default function Home() {
                 <Button
                   variant="outline"
                   className="border-2 border-[#76993D] text-[#76993D] hover:bg-[#f2f6eb] rounded-full px-8 py-6 text-lg"
-                  onClick={() => document.getElementById('metodo')?.scrollIntoView({ behavior: 'smooth' })}
+                  onClick={() => handleMethodClick('Hero')}
                 >
                   Conheça o Método
                 </Button>
@@ -367,7 +426,7 @@ export default function Home() {
               </p>
             </div>
 
-            {/* Etapa 6 - NEW */}
+            {/* Etapa 6 */}
             <div className="bg-white rounded-2xl p-6 border border-[#e9eee1] hover:shadow-lg transition text-center">
               <div className="w-12 h-12 bg-[#76993D] rounded-lg flex items-center justify-center mb-4 mx-auto">
                 <span className="text-white font-bold">6</span>
@@ -387,7 +446,7 @@ export default function Home() {
               Aplique para o nosso programa de acompanhamento premium e transforme sua saúde em 12 semanas.
             </p>
             <Button 
-              onClick={() => setIsQualificationModalOpen(true)}
+              onClick={() => handleScheduleClick('Method')}
               className="bg-[#76993D] hover:bg-[#344D0E] text-white rounded-full px-8 py-6 text-lg"
             >
               Aplicar para o Programa
@@ -396,8 +455,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Depoimentos Section - NEW */}
-      <section className="py-20">
+      {/* Depoimentos Section */}
+      <section id="testimonials" className="py-20">
         <div className="container max-w-6xl">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-serif font-bold text-[#344D0E] mb-4">
@@ -466,7 +525,7 @@ export default function Home() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button 
-                onClick={() => setIsQualificationModalOpen(true)}
+                onClick={() => handleScheduleClick('CTA')}
                 className="bg-[#76993D] hover:bg-[#344D0E] text-white rounded-full px-8 py-6 text-lg"
               >
                 Agendar Consulta
@@ -474,7 +533,7 @@ export default function Home() {
               <Button
                 variant="outline"
                 className="border-2 border-[#76993D] text-[#76993D] hover:bg-[#f2f6eb] rounded-full px-8 py-6 text-lg"
-                onClick={() => document.getElementById('metodo')?.scrollIntoView({ behavior: 'smooth' })}
+                onClick={() => handleMethodClick('CTA')}
               >
                 Conhecer o Método
               </Button>
