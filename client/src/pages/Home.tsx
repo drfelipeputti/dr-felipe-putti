@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, MapPin, CheckCircle2, Phone, Mail, Instagram } from "lucide-react";
+import { ArrowRight, MapPin, CheckCircle2, Phone, Mail, Instagram, Users, Beaker, Heart, Zap, TrendingUp } from "lucide-react";
 import { useState } from "react";
 import QualificationModal from "@/components/QualificationModal";
 
@@ -24,9 +24,11 @@ export default function Home() {
       >
         <div className="container flex items-center justify-between h-20">
           <div className="flex items-center gap-2">
-            <div className="w-10 h-10 bg-gradient-to-br from-[#76993D] to-[#344D0E] rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-lg">FP</span>
-            </div>
+            <img 
+              src="/manus-storage/logos_30bbb326.png" 
+              alt="Dr. Felipe Putti Logo" 
+              className="w-10 h-10"
+            />
             <span className="font-serif font-bold text-lg text-[#344D0E] hidden sm:inline">
               Dr. Felipe Putti
             </span>
@@ -38,6 +40,9 @@ export default function Home() {
             </a>
             <a href="#beneficios" className="text-[#344D0E] hover:text-[#76993D] transition font-medium text-sm">
               Benefícios
+            </a>
+            <a href="#metodo" className="text-[#344D0E] hover:text-[#76993D] transition font-medium text-sm">
+              O Método
             </a>
             <a href="#contato" className="text-[#344D0E] hover:text-[#76993D] transition font-medium text-sm">
               Contato
@@ -81,6 +86,7 @@ export default function Home() {
                 <Button
                   variant="outline"
                   className="border-2 border-[#76993D] text-[#76993D] hover:bg-[#f2f6eb] rounded-full px-8 py-6 text-lg"
+                  onClick={() => document.getElementById('metodo')?.scrollIntoView({ behavior: 'smooth' })}
                 >
                   Conheça o Método
                 </Button>
@@ -224,15 +230,111 @@ export default function Home() {
               </div>
               <h3 className="text-2xl font-serif font-bold text-[#344D0E] mb-3">Tecnologia Avançada</h3>
               <p className="text-[#4A5F22] leading-relaxed">
-                Bioimpedância InBody e exames laboratoriais avançados para monitoramento preciso.
+                Monitoramento preciso com exames laboratoriais avançados e análises periódicas de composição corporal.
+              </p>
+            </div>
+
+            {/* Benefit 5 - NEW */}
+            <div className="bg-white rounded-2xl p-8 border border-[#e9eee1] hover:shadow-xl transition">
+              <div className="w-14 h-14 bg-[#f2f6eb] rounded-xl flex items-center justify-center mb-4">
+                <span className="text-[#76993D] font-bold text-2xl">05</span>
+              </div>
+              <h3 className="text-2xl font-serif font-bold text-[#344D0E] mb-3">Equipe Multidisciplinar</h3>
+              <p className="text-[#4A5F22] leading-relaxed">
+                Acompanhamento integrado com cardiologista, nutricionista, nutrólogo, educador físico, psicólogo, fisioterapeuta e enfermeiro.
               </p>
             </div>
           </div>
         </div>
       </section>
 
+      {/* O Método Section - NEW */}
+      <section id="metodo" className="py-20 bg-white/50 backdrop-blur">
+        <div className="container max-w-6xl">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-serif font-bold text-[#344D0E] mb-4">
+              Como Funciona o Nosso Método
+            </h2>
+            <p className="text-xl text-[#4A5F22] max-w-2xl mx-auto">
+              Um programa de acompanhamento completo de 12 semanas (3 meses) com resultados comprovados e suporte contínuo.
+            </p>
+          </div>
 
-      {/* Benefícios Section */}
+          <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-6 mb-12">
+            {/* Etapa 1 */}
+            <div className="bg-white rounded-2xl p-6 border border-[#e9eee1] hover:shadow-lg transition text-center">
+              <div className="w-12 h-12 bg-[#76993D] rounded-lg flex items-center justify-center mb-4 mx-auto">
+                <span className="text-white font-bold">1</span>
+              </div>
+              <h4 className="font-serif font-bold text-[#344D0E] mb-2">Mapeamento Profundo</h4>
+              <p className="text-sm text-[#4A5F22]">
+                Consulta inicial de 1h30 com análise completa do seu histórico de saúde
+              </p>
+            </div>
+
+            {/* Etapa 2 */}
+            <div className="bg-white rounded-2xl p-6 border border-[#e9eee1] hover:shadow-lg transition text-center">
+              <div className="w-12 h-12 bg-[#76993D] rounded-lg flex items-center justify-center mb-4 mx-auto">
+                <span className="text-white font-bold">2</span>
+              </div>
+              <h4 className="font-serif font-bold text-[#344D0E] mb-2">Análise Hormonal</h4>
+              <p className="text-sm text-[#4A5F22]">
+                Exames laboratoriais avançados para entender o funcionamento do seu metabolismo.
+              </p>
+            </div>
+
+            {/* Etapa 3 */}
+            <div className="bg-white rounded-2xl p-6 border border-[#e9eee1] hover:shadow-lg transition text-center">
+              <div className="w-12 h-12 bg-[#76993D] rounded-lg flex items-center justify-center mb-4 mx-auto">
+                <span className="text-white font-bold">3</span>
+              </div>
+              <h4 className="font-serif font-bold text-[#344D0E] mb-2">Suplementação</h4>
+              <p className="text-sm text-[#4A5F22]">
+                Prescrição personalizada de manipulados e peptídeos para otimizar seus resultados.
+              </p>
+            </div>
+
+            {/* Etapa 4 */}
+            <div className="bg-white rounded-2xl p-6 border border-[#e9eee1] hover:shadow-lg transition text-center">
+              <div className="w-12 h-12 bg-[#76993D] rounded-lg flex items-center justify-center mb-4 mx-auto">
+                <span className="text-white font-bold">4</span>
+              </div>
+              <h4 className="font-serif font-bold text-[#344D0E] mb-2">Estratégia Alimentar</h4>
+              <p className="text-sm text-[#4A5F22]">
+                Plano nutricional inteligente adaptado ao seu estilo de vida e objetivos.
+              </p>
+            </div>
+
+            {/* Etapa 5 */}
+            <div className="bg-white rounded-2xl p-6 border border-[#e9eee1] hover:shadow-lg transition text-center">
+              <div className="w-12 h-12 bg-[#76993D] rounded-lg flex items-center justify-center mb-4 mx-auto">
+                <span className="text-white font-bold">5</span>
+              </div>
+              <h4 className="font-serif font-bold text-[#344D0E] mb-2">Suporte Contínuo</h4>
+              <p className="text-sm text-[#4A5F22]">
+                Acesso direto via WhatsApp em horário comercial para dúvidas e orientações.
+              </p>
+            </div>
+          </div>
+
+          <div className="bg-gradient-to-br from-[#f2f6eb] to-[#f7f9f3] rounded-2xl p-8 border border-[#e9eee1] text-center">
+            <h3 className="text-2xl font-serif font-bold text-[#344D0E] mb-4">
+              Pronto para Começar?
+            </h3>
+            <p className="text-[#4A5F22] mb-6 max-w-2xl mx-auto">
+              Aplique para o nosso programa de acompanhamento premium e transforme sua saúde em 12 semanas.
+            </p>
+            <Button 
+              onClick={() => setIsQualificationModalOpen(true)}
+              className="bg-[#76993D] hover:bg-[#344D0E] text-white rounded-full px-8 py-6 text-lg"
+            >
+              Aplicar para o Programa
+            </Button>
+          </div>
+        </div>
+      </section>
+
+      {/* Direção Clínica Section */}
       <section className="py-20 bg-white">
         <div className="container max-w-6xl">
           <div className="text-center mb-12">
@@ -240,9 +342,11 @@ export default function Home() {
           </div>
 
           <div className="bg-white/10 backdrop-blur rounded-3xl p-12 border border-white/20 text-center">
-            <div className="w-24 h-24 bg-gradient-to-br from-[#76993D] to-[#5F7A2E] rounded-full mx-auto mb-6 flex items-center justify-center">
-              <span className="text-4xl font-bold">FP</span>
-            </div>
+            <img 
+              src="/manus-storage/dr_felipe_sem_fundo_5b97e748.png" 
+              alt="Dr. Felipe Putti" 
+              className="w-40 h-40 rounded-full mx-auto mb-6 object-cover border-4 border-[#76993D]"
+            />
             <h3 className="text-3xl font-serif font-bold mb-2">Dr. Felipe Putti</h3>
             <p className="text-[#d4e5b9] text-lg mb-4">Diretor Técnico Médico</p>
             <p className="text-[#d4e5b9] font-semibold">CRM 169940 SP</p>
@@ -273,6 +377,7 @@ export default function Home() {
               <Button
                 variant="outline"
                 className="border-2 border-[#76993D] text-[#76993D] hover:bg-[#f2f6eb] rounded-full px-8 py-6 text-lg"
+                onClick={() => document.getElementById('metodo')?.scrollIntoView({ behavior: 'smooth' })}
               >
                 Conhecer o Método
               </Button>
@@ -288,9 +393,11 @@ export default function Home() {
             {/* Brand */}
             <div className="space-y-4">
               <div className="flex items-center gap-2">
-                <div className="w-10 h-10 bg-gradient-to-br from-[#76993D] to-[#5F7A2E] rounded-lg flex items-center justify-center">
-                  <span className="font-bold text-lg">FP</span>
-                </div>
+                <img 
+                  src="/manus-storage/logos_30bbb326.png" 
+                  alt="Dr. Felipe Putti Logo" 
+                  className="w-10 h-10"
+                />
                 <span className="font-serif font-bold text-lg">Dr. Felipe Putti</span>
               </div>
               <p className="text-[#d4e5b9] text-sm">
@@ -310,6 +417,11 @@ export default function Home() {
                 <li>
                   <a href="#beneficios" className="hover:text-white transition">
                     Benefícios
+                  </a>
+                </li>
+                <li>
+                  <a href="#metodo" className="hover:text-white transition">
+                    O Método
                   </a>
                 </li>
                 <li>
