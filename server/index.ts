@@ -2,6 +2,7 @@ import express from "express";
 import { createServer } from "http";
 import path from "path";
 import { fileURLToPath } from "url";
+import conversionsRouter from "./routes/conversions.js";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -9,6 +10,13 @@ const __dirname = path.dirname(__filename);
 async function startServer() {
   const app = express();
   const server = createServer(app);
+
+  // Middleware
+  app.use(express.json());
+  app.use(express.urlencoded({ extended: true }));
+
+  // API Routes
+  app.use(conversionsRouter);
 
   // Serve static files from dist/public in production
   const staticPath =
@@ -18,6 +26,11 @@ async function startServer() {
 
   app.use(express.static(staticPath));
 
+  // Health check
+  app.get("/api/health", (_req, res) => {
+    res.json({ status: "ok", timestamp: new Date().toISOString() });
+  });
+
   // Handle client-side routing - serve index.html for all routes
   app.get("*", (_req, res) => {
     res.sendFile(path.join(staticPath, "index.html"));
@@ -26,8 +39,13 @@ async function startServer() {
   const port = process.env.PORT || 3000;
 
   server.listen(port, () => {
-    console.log(`Server running on http://localhost:${port}/`);
+    console.log(`✅ Server running on http://localhost:${port}/`);
+    console.log(`📊 Conversions API configured: ${!!process.env.META_ACCESS_TOKEN}`);
+    console.log(`🔍 Pixel ID: 391921773732969`);
   });
 }
 
-startServer().catch(console.error);
+startServer().catch((error) => {
+  console.error("❌ Erro ao iniciar servidor:", error);
+  process.exit(1);
+});
