@@ -496,12 +496,14 @@ export default function Home() {
           </div>
 
           <div className="bg-gradient-to-br from-[#f2f6eb] to-[#f7f9f3] rounded-3xl p-12 border border-[#e9eee1] text-center">
-            <div className="relative w-40 h-40 mx-auto mb-6">
-              <img 
-                src="/manus-storage/dr_felipe_sem_fundo_5b97e748.png" 
-                alt="Dr. Felipe Putti" 
-                className="w-40 h-40 rounded-full mx-auto object-cover border-4 border-[#76993D] relative z-10"
-              />
+            <div className="flex justify-center mb-8">
+              <div className="relative w-48 h-48 md:w-56 md:h-56">
+                <img 
+                  src="/manus-storage/dr_felipe_sem_fundo_5b97e748.png" 
+                  alt="Dr. Felipe Putti" 
+                  className="w-full h-full rounded-full object-cover border-4 border-[#76993D]"
+                />
+              </div>
             </div>
             <h3 className="text-3xl font-serif font-bold mb-2 text-[#344D0E]">Dr. Felipe Putti</h3>
             <p className="text-[#76993D] text-lg mb-4 font-semibold">Diretor Técnico Médico</p>
@@ -604,8 +606,8 @@ export default function Home() {
                 </li>
                 <li className="flex items-center gap-2">
                   <Mail className="w-4 h-4 text-[#76993D]" />
-                  <a href="mailto:felipeputti@uol.com.br" className="hover:text-white transition">
-                    felipeputti@uol.com.br
+                  <a href="mailto:email@drfelipeputti.com.br" className="hover:text-white transition">
+                    email@drfelipeputti.com.br
                   </a>
                 </li>
               </ul>
