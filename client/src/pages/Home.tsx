@@ -495,22 +495,26 @@ export default function Home() {
             <h2 className="text-4xl md:text-5xl font-serif font-bold mb-4 text-[#344D0E]">Direção Clínica</h2>
           </div>
 
-          <div className="bg-gradient-to-br from-[#f2f6eb] to-[#f7f9f3] rounded-3xl p-12 border border-[#e9eee1] text-center">
-            <div className="flex justify-center mb-8">
-              <div className="relative w-48 h-48 md:w-56 md:h-56">
-                <img 
-                  src="/manus-storage/dr_felipe_sem_fundo_5b97e748.png" 
-                  alt="Dr. Felipe Putti" 
-                  className="w-full h-full rounded-full object-cover border-4 border-[#76993D]"
-                />
+          <div className="bg-gradient-to-br from-[#f2f6eb] to-[#f7f9f3] rounded-3xl p-12 border border-[#e9eee1]">
+            <div className="flex flex-col md:flex-row items-center justify-center gap-12 md:gap-16">
+              <div className="flex-shrink-0">
+                <div className="relative w-48 h-48 md:w-56 md:h-56">
+                  <img 
+                    src="/manus-storage/dr_felipe_sem_fundo_5b97e748.png" 
+                    alt="Dr. Felipe Putti" 
+                    className="w-full h-full rounded-full object-cover border-4 border-[#76993D]"
+                  />
+                </div>
+              </div>
+              <div className="text-center md:text-left">
+              <h3 className="text-3xl font-serif font-bold mb-2 text-[#344D0E]">Dr. Felipe Putti</h3>
+              <p className="text-[#76993D] text-lg mb-4 font-semibold">Diretor Técnico Médico</p>
+              <p className="text-[#4A5F22] font-semibold mb-4">CRM 169940 SP</p>
+              <p className="text-[#4A5F22] mt-4 leading-relaxed">
+                Especialista em Medicina Esportiva, Nutrição e Estética com mais de 12 anos de experiência dedicados à otimização da saúde e performance de seus pacientes.
+              </p>
               </div>
             </div>
-            <h3 className="text-3xl font-serif font-bold mb-2 text-[#344D0E]">Dr. Felipe Putti</h3>
-            <p className="text-[#76993D] text-lg mb-4 font-semibold">Diretor Técnico Médico</p>
-            <p className="text-[#4A5F22] font-semibold mb-4">CRM 169940 SP</p>
-            <p className="text-[#4A5F22] mt-4 max-w-2xl mx-auto leading-relaxed">
-              Especialista em Medicina Esportiva, Nutrição e Estética com mais de 12 anos de experiência dedicados à otimização da saúde e performance de seus pacientes.
-            </p>
           </div>
         </div>
       </section>
