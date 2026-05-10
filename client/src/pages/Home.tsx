@@ -209,8 +209,8 @@ export default function Home() {
                   <p className="text-sm text-[#4A5F22]">Anos de Atuação</p>
                 </div>
                 <div>
-                  <div className="text-3xl font-bold text-[#76993D]">1000+</div>
-                  <p className="text-sm text-[#4A5F22]">Pacientes Atendidos</p>
+                  <div className="text-3xl font-bold text-[#76993D]">+1000</div>
+                  <p className="text-sm text-[#4A5F22]">Pacientes por Ano</p>
                 </div>
                 <div>
                   <div className="text-3xl font-bold text-[#76993D]">3</div>
@@ -372,69 +372,87 @@ export default function Home() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
             {/* Etapa 1 */}
-            <div className="bg-white rounded-2xl p-6 border border-[#e9eee1] hover:shadow-lg transition text-center">
-              <div className="w-12 h-12 bg-[#76993D] rounded-lg flex items-center justify-center mb-4 mx-auto">
-                <span className="text-white font-bold">1</span>
+            <div className="bg-white rounded-2xl overflow-hidden border border-[#e9eee1] hover:shadow-lg transition">
+              <img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663568685363/cH9bd3vdEswPP279KavXwa/metodo_1_mapeamento_profundo-9SbxoVpuGg52QmaE8iZ8as.webp" alt="Mapeamento Profundo" className="w-full h-40 object-cover" />
+              <div className="p-6 text-center">
+                <div className="w-12 h-12 bg-[#76993D] rounded-lg flex items-center justify-center mb-4 mx-auto">
+                  <span className="text-white font-bold">1</span>
+                </div>
+                <h4 className="font-serif font-bold text-[#344D0E] mb-2">Mapeamento Profundo</h4>
+                <p className="text-sm text-[#4A5F22]">
+                  Consulta inicial com análise completa do seu histórico de saúde
+                </p>
               </div>
-              <h4 className="font-serif font-bold text-[#344D0E] mb-2">Mapeamento Profundo</h4>
-              <p className="text-sm text-[#4A5F22]">
-                Consulta inicial com análise completa do seu histórico de saúde
-              </p>
             </div>
 
             {/* Etapa 2 */}
-            <div className="bg-white rounded-2xl p-6 border border-[#e9eee1] hover:shadow-lg transition text-center">
-              <div className="w-12 h-12 bg-[#76993D] rounded-lg flex items-center justify-center mb-4 mx-auto">
-                <span className="text-white font-bold">2</span>
+            <div className="bg-white rounded-2xl overflow-hidden border border-[#e9eee1] hover:shadow-lg transition">
+              <img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663568685363/cH9bd3vdEswPP279KavXwa/metodo_2_analise_hormonal-SPW3PopKAGb5qyALxV2PxP.webp" alt="Análise Hormonal" className="w-full h-40 object-cover" />
+              <div className="p-6 text-center">
+                <div className="w-12 h-12 bg-[#76993D] rounded-lg flex items-center justify-center mb-4 mx-auto">
+                  <span className="text-white font-bold">2</span>
+                </div>
+                <h4 className="font-serif font-bold text-[#344D0E] mb-2">Análise Hormonal</h4>
+                <p className="text-sm text-[#4A5F22]">
+                  Exames laboratoriais avançados para entender o funcionamento do seu metabolismo.
+                </p>
               </div>
-              <h4 className="font-serif font-bold text-[#344D0E] mb-2">Análise Hormonal</h4>
-              <p className="text-sm text-[#4A5F22]">
-                Exames laboratoriais avançados para entender o funcionamento do seu metabolismo.
-              </p>
             </div>
 
             {/* Etapa 3 */}
-            <div className="bg-white rounded-2xl p-6 border border-[#e9eee1] hover:shadow-lg transition text-center">
-              <div className="w-12 h-12 bg-[#76993D] rounded-lg flex items-center justify-center mb-4 mx-auto">
-                <span className="text-white font-bold">3</span>
+            <div className="bg-white rounded-2xl overflow-hidden border border-[#e9eee1] hover:shadow-lg transition">
+              <img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663568685363/cH9bd3vdEswPP279KavXwa/metodo_3_suplementacao-avvwZE2G9ctncfkDLsQBga.webp" alt="Suplementação" className="w-full h-40 object-cover" />
+              <div className="p-6 text-center">
+                <div className="w-12 h-12 bg-[#76993D] rounded-lg flex items-center justify-center mb-4 mx-auto">
+                  <span className="text-white font-bold">3</span>
+                </div>
+                <h4 className="font-serif font-bold text-[#344D0E] mb-2">Suplementação</h4>
+                <p className="text-sm text-[#4A5F22]">
+                  Prescrição personalizada de manipulados e peptídeos para otimizar seus resultados.
+                </p>
               </div>
-              <h4 className="font-serif font-bold text-[#344D0E] mb-2">Suplementação</h4>
-              <p className="text-sm text-[#4A5F22]">
-                Prescrição personalizada de manipulados e peptídeos para otimizar seus resultados.
-              </p>
             </div>
 
             {/* Etapa 4 */}
-            <div className="bg-white rounded-2xl p-6 border border-[#e9eee1] hover:shadow-lg transition text-center">
-              <div className="w-12 h-12 bg-[#76993D] rounded-lg flex items-center justify-center mb-4 mx-auto">
-                <span className="text-white font-bold">4</span>
+            <div className="bg-white rounded-2xl overflow-hidden border border-[#e9eee1] hover:shadow-lg transition">
+              <img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663568685363/cH9bd3vdEswPP279KavXwa/metodo_4_estrategia_alimentar-fjCP5kNBSTdKayReKhobZ9.webp" alt="Estratégia Alimentar" className="w-full h-40 object-cover" />
+              <div className="p-6 text-center">
+                <div className="w-12 h-12 bg-[#76993D] rounded-lg flex items-center justify-center mb-4 mx-auto">
+                  <span className="text-white font-bold">4</span>
+                </div>
+                <h4 className="font-serif font-bold text-[#344D0E] mb-2">Estratégia Alimentar</h4>
+                <p className="text-sm text-[#4A5F22]">
+                  Plano nutricional inteligente adaptado ao seu estilo de vida e objetivos.
+                </p>
               </div>
-              <h4 className="font-serif font-bold text-[#344D0E] mb-2">Estratégia Alimentar</h4>
-              <p className="text-sm text-[#4A5F22]">
-                Plano nutricional inteligente adaptado ao seu estilo de vida e objetivos.
-              </p>
             </div>
 
             {/* Etapa 5 */}
-            <div className="bg-white rounded-2xl p-6 border border-[#e9eee1] hover:shadow-lg transition text-center">
-              <div className="w-12 h-12 bg-[#76993D] rounded-lg flex items-center justify-center mb-4 mx-auto">
-                <span className="text-white font-bold">5</span>
+            <div className="bg-white rounded-2xl overflow-hidden border border-[#e9eee1] hover:shadow-lg transition">
+              <img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663568685363/cH9bd3vdEswPP279KavXwa/metodo_5_suporte_continuo-7b2SSoTEHRTPyoRcC934k7.webp" alt="Suporte Contínuo" className="w-full h-40 object-cover" />
+              <div className="p-6 text-center">
+                <div className="w-12 h-12 bg-[#76993D] rounded-lg flex items-center justify-center mb-4 mx-auto">
+                  <span className="text-white font-bold">5</span>
+                </div>
+                <h4 className="font-serif font-bold text-[#344D0E] mb-2">Suporte Contínuo</h4>
+                <p className="text-sm text-[#4A5F22]">
+                  Acesso direto via WhatsApp em horário comercial para dúvidas e orientações.
+                </p>
               </div>
-              <h4 className="font-serif font-bold text-[#344D0E] mb-2">Suporte Contínuo</h4>
-              <p className="text-sm text-[#4A5F22]">
-                Acesso direto via WhatsApp em horário comercial para dúvidas e orientações.
-              </p>
             </div>
 
             {/* Etapa 6 */}
-            <div className="bg-white rounded-2xl p-6 border border-[#e9eee1] hover:shadow-lg transition text-center">
-              <div className="w-12 h-12 bg-[#76993D] rounded-lg flex items-center justify-center mb-4 mx-auto">
-                <span className="text-white font-bold">6</span>
+            <div className="bg-white rounded-2xl overflow-hidden border border-[#e9eee1] hover:shadow-lg transition">
+              <img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663568685363/cH9bd3vdEswPP279KavXwa/metodo_6_analise_genetica-KoAqF3DSiorrJqzSa8qxHQ.webp" alt="Análise Genética" className="w-full h-40 object-cover" />
+              <div className="p-6 text-center">
+                <div className="w-12 h-12 bg-[#76993D] rounded-lg flex items-center justify-center mb-4 mx-auto">
+                  <span className="text-white font-bold">6</span>
+                </div>
+                <h4 className="font-serif font-bold text-[#344D0E] mb-2">Análise Genética</h4>
+                <p className="text-sm text-[#4A5F22]">
+                  Teste genético para entender sua predisposição metabólica e personalizar seu programa.
+                </p>
               </div>
-              <h4 className="font-serif font-bold text-[#344D0E] mb-2">Análise Genética</h4>
-              <p className="text-sm text-[#4A5F22]">
-                Teste genético para entender sua predisposição metabólica e personalizar seu programa.
-              </p>
             </div>
           </div>
 
