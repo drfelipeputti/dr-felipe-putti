@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, MapPin, CheckCircle2, Phone, Mail, Instagram, Star } from "lucide-react";
 import { useState, useEffect } from "react";
 import QualificationModal from "@/components/QualificationModal";
+import { trackButtonClick, trackSectionView, trackWhatsAppClick } from "@/utils/gtm";
 
 // Declarar fbq como global
 declare global {
@@ -55,6 +56,8 @@ export default function Home() {
         currency: 'BRL'
       });
     }
+    // Rastrear clique em botão no GTM
+    trackButtonClick('schedule_consultation', source);
   };
 
   const handleMethodClick = (source: string) => {
@@ -68,6 +71,10 @@ export default function Home() {
         currency: 'BRL'
       });
     }
+    // Rastrear clique em botão no GTM
+    trackButtonClick('know_method', source);
+    // Rastrear visualização da seção de método
+    trackSectionView('method_section');
   };
 
   const testimonials = [
@@ -622,13 +629,13 @@ export default function Home() {
                 </li>
                 <li className="flex items-center gap-2">
                   <Phone className="w-4 h-4 text-[#76993D]" />
-                  <a href="tel:14996162354" className="hover:text-white transition">
+                  <a href="tel:14996162354" className="hover:text-white transition" onClick={() => trackButtonClick('phone_contact', 'footer')}>
                     (14) 99616-2354
                   </a>
                 </li>
                 <li className="flex items-center gap-2">
                   <Mail className="w-4 h-4 text-[#76993D]" />
-                  <a href="mailto:email@drfelipeputti.com.br" className="hover:text-white transition">
+                  <a href="mailto:email@drfelipeputti.com.br" className="hover:text-white transition" onClick={() => trackButtonClick('email_contact', 'footer')}>
                     email@drfelipeputti.com.br
                   </a>
                 </li>

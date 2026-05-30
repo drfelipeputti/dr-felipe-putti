@@ -1,6 +1,7 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { X, CheckCircle2 } from "lucide-react";
+import { trackFormSubmit, trackWhatsAppClick, trackSuccessPageView, trackModalOpen } from "@/utils/gtm";
 
 interface QualificationModalProps {
   isOpen: boolean;
@@ -18,6 +19,15 @@ export default function QualificationModal({ isOpen, onClose }: QualificationMod
     experience: "",
   });
   const [submitted, setSubmitted] = useState(false);
+  const [modalTracked, setModalTracked] = useState(false);
+
+  // Rastrear abertura do modal
+  useEffect(() => {
+    if (isOpen && !modalTracked) {
+      trackModalOpen('qualification_form');
+      setModalTracked(true);
+    }
+  }, [isOpen, modalTracked]);
 
   if (!isOpen) return null;
 
@@ -54,14 +64,24 @@ export default function QualificationModal({ isOpen, onClose }: QualificationMod
       });
     }
     
+    // Rastrear evento de formulário preenchido no GTM
+    trackFormSubmit(formData);
+    
     // Aqui você pode integrar com um serviço de backend ou API
     // Por enquanto, apenas mostramos a mensagem de sucesso
     setSubmitted(true);
+    
+    // Rastrear página de sucesso visualizada
+    trackSuccessPageView();
     
     // Redirecionar para WhatsApp após 2 segundos
     setTimeout(() => {
       const message = `Olá! Meu nome é ${formData.name}. Gostaria de agendar uma consulta. Objetivo: ${formData.objective}. Orçamento: ${formData.budget}. Disponibilidade: ${formData.availability}.`;
       const whatsappUrl = `https://wa.me/5514996162354?text=${encodeURIComponent(message)}`;
+      
+      // Rastrear clique em WhatsApp
+      trackWhatsAppClick('form_submission');
+      
       window.open(whatsappUrl, "_blank");
       onClose();
       setStep(1);
@@ -74,6 +94,7 @@ export default function QualificationModal({ isOpen, onClose }: QualificationMod
         experience: "",
       });
       setSubmitted(false);
+      setModalTracked(false);
     }, 2000);
   };
 
