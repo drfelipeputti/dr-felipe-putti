@@ -227,8 +227,8 @@ export default function Home() {
             </div>
 
             {/* Right Image Placeholder */}
-            <div className="hidden md:flex items-center justify-center">
-              <div className="relative w-full aspect-square">
+            <div className="flex items-center justify-center mt-12 md:mt-0">
+              <div className="relative w-full max-w-sm aspect-square">
                 <div className="absolute inset-0 bg-gradient-to-br from-[#76993D] to-[#344D0E] rounded-3xl opacity-10 blur-3xl"></div>
                 <div className="relative w-full h-full bg-gradient-to-br from-[#f2f6eb] to-[#f7f9f3] rounded-3xl flex items-center justify-center border-2 border-[#e9eee1]">
                   <div className="text-center space-y-4">
