@@ -647,9 +647,9 @@ export default function Home() {
               <h4 className="font-serif font-bold mb-4">Redes Sociais</h4>
               <ul className="space-y-2 text-[#d4e5b9] text-sm">
                 <li>
-                  <a href="https://instagram.com/dr.felipeputti" className="hover:text-white transition flex items-center gap-2">
+                  <a href="https://instagram.com/drfelipeputti" className="hover:text-white transition flex items-center gap-2">
                     <Instagram className="w-4 h-4" />
-                    @dr.felipeputti
+                    @drfelipeputti
                   </a>
                 </li>
               </ul>
