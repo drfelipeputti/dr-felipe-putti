@@ -563,7 +563,7 @@ export default function Home() {
       {/* Footer/Contact */}
       <footer className="bg-[#344D0E] text-white py-16">
         <div className="container max-w-6xl">
-          <div className="grid md:grid-cols-4 gap-8 mb-12">
+            <div className="grid md:grid-cols-3 gap-8 mb-12">
             {/* Brand */}
             <div className="space-y-4">
               <div className="flex items-center gap-2">
@@ -628,23 +628,6 @@ export default function Home() {
                 </li>
               </ul>
             </div>
-
-<<<<<<< Updated upstream
-            {/* Social */}
-            <div>
-              <h4 className="font-serif font-bold mb-4">Redes Sociais</h4>
-              <ul className="space-y-2 text-[#d4e5b9] text-sm">
-                <li>
-                  <a href="https://instagram.com/drfelipeputti" className="hover:text-white transition flex items-center gap-2">
-                    <Instagram className="w-4 h-4" />
-                    @drfelipeputti
-                  </a>
-                </li>
-              </ul>
-            </div>
-=======
-
->>>>>>> Stashed changes
           </div>
 
           {/* Divider */}
