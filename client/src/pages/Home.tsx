@@ -140,20 +140,7 @@ export default function Home() {
             </span>
           </div>
 
-          <nav className="hidden md:flex items-center gap-8">
-            <a href="#sobre" className="text-[#344D0E] hover:text-[#76993D] transition font-medium text-sm">
-              Sobre
-            </a>
-            <a href="#beneficios" className="text-[#344D0E] hover:text-[#76993D] transition font-medium text-sm">
-              Benefícios
-            </a>
-            <a href="#metodo" className="text-[#344D0E] hover:text-[#76993D] transition font-medium text-sm">
-              O Método
-            </a>
-            <a href="#contato" className="text-[#344D0E] hover:text-[#76993D] transition font-medium text-sm">
-              Contato
-            </a>
-          </nav>
+
 
           <Button 
             onClick={() => handleScheduleClick('Header')}
@@ -185,10 +172,10 @@ export default function Home() {
                   </span>
                 </div>
                 <h1 className="text-5xl md:text-6xl font-serif font-bold text-[#344D0E] leading-tight">
-                  Recupere sua <span className="text-[#76993D]">Performance</span>
+                  Transforme seu Corpo e <span className="text-[#76993D]">Recupere sua Energia</span>
                 </h1>
                 <p className="text-xl text-[#4A5F22] leading-relaxed max-w-lg">
-                  Otimização metabólica e emagrecimento definitivo para profissionais que não têm tempo a perder.
+                  Emagrecimento premium e otimização hormonal para mulheres que buscam performance e bem-estar sem sofrimento.
                 </p>
               </div>
 
@@ -197,7 +184,7 @@ export default function Home() {
                   onClick={() => handleScheduleClick('Hero')}
                   className="bg-[#76993D] hover:bg-[#344D0E] text-white rounded-full px-8 py-6 text-lg flex items-center gap-2"
                 >
-                  Agende sua Consulta
+                  Quero Transformar Minha Saúde
                   <ArrowRight className="w-5 h-5" />
                 </Button>
                 <Button
@@ -205,7 +192,7 @@ export default function Home() {
                   className="border-2 border-[#76993D] text-[#76993D] hover:bg-[#f2f6eb] rounded-full px-8 py-6 text-lg"
                   onClick={() => handleMethodClick('Hero')}
                 >
-                  Conheça o Método
+                  Ver Detalhes do Método
                 </Button>
               </div>
 
@@ -302,7 +289,7 @@ export default function Home() {
               O que Oferecemos
             </h2>
             <p className="text-xl text-[#4A5F22] max-w-2xl mx-auto">
-              Acompanhamento personalizado e evolução assistida pela equipe do Dr. Felipe Putti.
+              Transforme sua saúde e alcance seus objetivos com nosso acompanhamento personalizado e evolução assistida.
             </p>
           </div>
 
@@ -314,7 +301,7 @@ export default function Home() {
               </div>
               <h3 className="text-2xl font-serif font-bold text-[#344D0E] mb-3">Evolução Clínica</h3>
               <p className="text-[#4A5F22] leading-relaxed">
-                Acompanhamento individualizado com análises periódicas e ajustes no protocolo de tratamento.
+                Transformação personalizada com análises periódicas e ajustes contínuos para sua evolução.
               </p>
             </div>
 
@@ -325,7 +312,7 @@ export default function Home() {
               </div>
               <h3 className="text-2xl font-serif font-bold text-[#344D0E] mb-3">Evolução Corporal</h3>
               <p className="text-[#4A5F22] leading-relaxed">
-                Transformação visível com metodologia comprovada de emagrecimento e otimização estética.
+                Resultados visíveis e duradouros com nossa metodologia exclusiva de emagrecimento e otimização estética.
               </p>
             </div>
 
@@ -485,10 +472,10 @@ export default function Home() {
         <div className="container max-w-6xl">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-serif font-bold text-[#344D0E] mb-4">
-              O Que Nossos Pacientes Dizem
+              Resultados que Transformam Vidas
             </h2>
             <p className="text-xl text-[#4A5F22] max-w-2xl mx-auto">
-              Histórias reais de transformação e sucesso com o método do Dr. Felipe Putti.
+              Veja como o Protocolo Dr. Felipe Putti já ajudou centenas de mulheres a recuperarem sua energia, corpo e autoestima.
             </p>
           </div>
 
@@ -536,7 +523,7 @@ export default function Home() {
               <p className="text-[#76993D] text-lg mb-4 font-semibold">Diretor Técnico Médico</p>
               <p className="text-[#4A5F22] font-semibold mb-4">CRM 169940 SP</p>
               <p className="text-[#4A5F22] mt-4 leading-relaxed">
-                Especialista em Medicina Esportiva, Nutrição e Estética com mais de 12 anos de experiência dedicados à otimização da saúde e performance de seus pacientes.
+                Com mais de 12 anos de experiência, o Dr. Felipe Putti é um especialista em Medicina Esportiva, Nutrição e Estética. Sua jornada é dedicada a transformar vidas, otimizando a saúde e performance de seus pacientes com uma abordagem integrativa e resultados comprovados.
               </p>
               </div>
             </div>
@@ -559,14 +546,14 @@ export default function Home() {
                 onClick={() => handleScheduleClick('CTA')}
                 className="bg-[#76993D] hover:bg-[#344D0E] text-white rounded-full px-8 py-6 text-lg"
               >
-                Agendar Consulta
+                Agende Sua Avaliação
               </Button>
               <Button
                 variant="outline"
                 className="border-2 border-[#76993D] text-[#76993D] hover:bg-[#f2f6eb] rounded-full px-8 py-6 text-lg"
                 onClick={() => handleMethodClick('CTA')}
               >
-                Conhecer o Método
+                Saiba Mais Sobre o Método
               </Button>
             </div>
           </div>
@@ -642,6 +629,7 @@ export default function Home() {
               </ul>
             </div>
 
+<<<<<<< Updated upstream
             {/* Social */}
             <div>
               <h4 className="font-serif font-bold mb-4">Redes Sociais</h4>
@@ -654,12 +642,17 @@ export default function Home() {
                 </li>
               </ul>
             </div>
+=======
+
+>>>>>>> Stashed changes
           </div>
 
           {/* Divider */}
           <div className="border-t border-[#2a3d08] pt-8">
             <p className="text-center text-[#9ab878] text-sm">
               © 2026 Dr. Felipe Putti. Todos os direitos reservados.
+              <br />
+              CNPJ: XX.XXX.XXX/XXXX-XX
             </p>
           </div>
         </div>
