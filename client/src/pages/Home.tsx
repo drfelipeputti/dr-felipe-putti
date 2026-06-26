@@ -144,9 +144,9 @@ export default function Home() {
 
           <Button 
             onClick={() => handleScheduleClick('Header')}
-            className="bg-[#76993D] hover:bg-[#344D0E] text-white rounded-full px-6"
+            className="bg-[#76993D] hover:bg-[#344D0E] text-white rounded-full px-8 py-3 text-lg font-semibold animate-pulse shadow-lg hover:shadow-xl transition-all"
           >
-            Agendar Consulta
+            🔥 Agendar Consulta
           </Button>
         </div>
       </header>
@@ -182,10 +182,10 @@ export default function Home() {
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button 
                   onClick={() => handleScheduleClick('Hero')}
-                  className="bg-[#76993D] hover:bg-[#344D0E] text-white rounded-full px-8 py-6 text-lg flex items-center gap-2"
+                  className="bg-[#76993D] hover:bg-[#344D0E] text-white rounded-full px-10 py-8 text-2xl font-bold flex items-center gap-3 animate-pulse shadow-2xl hover:shadow-2xl transition-all transform hover:scale-105"
                 >
-                  Quero Transformar Minha Saúde
-                  <ArrowRight className="w-5 h-5" />
+                  🔥 Quero Transformar Minha Saúde
+                  <ArrowRight className="w-7 h-7" />
                 </Button>
                 <Button
                   variant="outline"
@@ -213,21 +213,7 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Right Image Placeholder */}
-            <div className="flex items-center justify-center mt-12 md:mt-0">
-              <div className="relative w-full max-w-sm aspect-square">
-                <div className="absolute inset-0 bg-gradient-to-br from-[#76993D] to-[#344D0E] rounded-3xl opacity-10 blur-3xl"></div>
-                <div className="relative w-full h-full bg-gradient-to-br from-[#f2f6eb] to-[#f7f9f3] rounded-3xl flex items-center justify-center border-2 border-[#e9eee1]">
-                  <div className="text-center space-y-4">
-                    <div className="w-20 h-20 bg-gradient-to-br from-[#76993D] to-[#344D0E] rounded-full mx-auto flex items-center justify-center">
-                      <span className="text-white text-3xl font-bold">FP</span>
-                    </div>
-                    <p className="text-[#344D0E] font-semibold">Dr. Felipe Putti</p>
-                    <p className="text-sm text-[#4A5F22]">CRM 169940 SP</p>
-                  </div>
-                </div>
-              </div>
-            </div>
+
           </div>
         </div>
       </section>
