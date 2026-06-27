@@ -690,10 +690,10 @@ export default function Home() {
       {/* Footer/Contact */}
       <footer className="bg-[#344D0E] text-white py-16">
         <div className="container max-w-6xl">
-            <div className="grid md:grid-cols-3 gap-8 mb-12">
+            <div className="flex flex-col md:flex-row items-center justify-between gap-8 mb-12">
             {/* Brand */}
-            <div className="space-y-4">
-              <div className="flex items-center gap-2">
+            <div className="space-y-2 text-center md:text-left">
+              <div className="flex items-center gap-2 justify-center md:justify-start">
                 <img 
                   src="/manus-storage/logos_30bbb326.png" 
                   alt="Dr. Felipe Putti Logo" 
@@ -702,52 +702,20 @@ export default function Home() {
                 <span className="font-serif font-bold text-lg">Dr. Felipe Putti</span>
               </div>
               <p className="text-[#d4e5b9] text-sm">
-                Saúde e Bem-estar Integrativos no coração de Bauru.
+                Saúde e Bem-estar Integrativos em Bauru
               </p>
             </div>
 
-            {/* Quick Links */}
-            <div>
-              <h4 className="font-serif font-bold mb-4">Menu</h4>
+            {/* Contact Info - Centered */}
+            <div className="text-center">
               <ul className="space-y-2 text-[#d4e5b9] text-sm">
-                <li>
-                  <a href="#sobre" className="hover:text-white transition">
-                    Sobre
-                  </a>
-                </li>
-                <li>
-                  <a href="#beneficios" className="hover:text-white transition">
-                    Benefícios
-                  </a>
-                </li>
-                <li>
-                  <a href="#metodo" className="hover:text-white transition">
-                    O Método
-                  </a>
-                </li>
-                <li>
-                  <a href="#contato" className="hover:text-white transition">
-                    Contato
-                  </a>
-                </li>
-              </ul>
-            </div>
-
-            {/* Contact Info */}
-            <div>
-              <h4 className="font-serif font-bold mb-4">Contato</h4>
-              <ul className="space-y-3 text-[#d4e5b9] text-sm">
-                <li className="flex items-start gap-2">
-                  <MapPin className="w-4 h-4 mt-1 flex-shrink-0 text-[#76993D]" />
-                  <span>R. Machado de Assis, Quadra 8 - Jardim Estoril, Bauru - SP, 17014-040</span>
-                </li>
-                <li className="flex items-center gap-2">
+                <li className="flex items-center justify-center gap-2">
                   <Phone className="w-4 h-4 text-[#76993D]" />
                   <a href="tel:14996162354" className="hover:text-white transition" onClick={() => trackButtonClick('phone_contact', 'footer')}>
                     (14) 99616-2354
                   </a>
                 </li>
-                <li className="flex items-center gap-2">
+                <li className="flex items-center justify-center gap-2">
                   <Mail className="w-4 h-4 text-[#76993D]" />
                   <a href="mailto:email@drfelipeputti.com.br" className="hover:text-white transition" onClick={() => trackButtonClick('email_contact', 'footer')}>
                     email@drfelipeputti.com.br
@@ -759,10 +727,10 @@ export default function Home() {
 
           {/* Divider */}
           <div className="border-t border-[#2a3d08] pt-8">
-            <p className="text-center text-[#9ab878] text-sm">
+            <p className="text-center text-[#9ab878] text-xs">
               © 2026 Dr. Felipe Putti. Todos os direitos reservados.
               <br />
-              CNPJ: XX.XXX.XXX/XXXX-XX
+              CNPJ: XX.XXX.XXX/XXXX-XX | Clínica de Medicina Esportiva e Performance
             </p>
           </div>
         </div>
