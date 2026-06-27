@@ -517,6 +517,147 @@ export default function Home() {
         </div>
       </section>
 
+      {/* FAQ Section */}
+      <section className="py-20 bg-gradient-to-br from-slate-50 via-blue-50 to-slate-100">
+        <div className="container max-w-4xl">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-serif font-bold text-[#344D0E] mb-4">
+              Dúvidas Frequentes
+            </h2>
+            <p className="text-xl text-[#4A5F22] max-w-2xl mx-auto">
+              Tudo que você precisa saber sobre nossos tratamentos
+            </p>
+          </div>
+
+          <div className="space-y-4">
+            {/* Emagrecimento FAQs */}
+            <div className="bg-white rounded-2xl p-6 border border-[#e9eee1] hover:shadow-lg transition">
+              <div className="mb-6">
+                <h3 className="text-2xl font-serif font-bold text-[#76993D] mb-4">Tratamento Emagrecimento</h3>
+              </div>
+              <div className="space-y-3">
+                <details className="group">
+                  <summary className="flex cursor-pointer items-center justify-between font-semibold text-[#344D0E] hover:text-[#76993D] transition">
+                    <span>Quanto tempo leva para ver resultados no Tratamento Emagrecimento?</span>
+                    <span className="transition group-open:rotate-180">▼</span>
+                  </summary>
+                  <p className="mt-3 text-[#4A5F22] leading-relaxed pl-4 border-l-2 border-[#76993D]">
+                    Nossos pacientes começam a notar mudanças significativas entre 2-4 semanas. Resultados mais expressivos (10-20kg) ocorrem entre 3-6 meses, dependendo do ponto de partida e aderência ao programa.
+                  </p>
+                </details>
+
+                <details className="group">
+                  <summary className="flex cursor-pointer items-center justify-between font-semibold text-[#344D0E] hover:text-[#76993D] transition">
+                    <span>Qual é o investimento do Tratamento Emagrecimento?</span>
+                    <span className="transition group-open:rotate-180">▼</span>
+                  </summary>
+                  <p className="mt-3 text-[#4A5F22] leading-relaxed pl-4 border-l-2 border-[#76993D]">
+                    O programa de 12 semanas tem o custo estimado menos que você gastou até hoje com tentativas frustradas, incluindo consultas, exames, suplementação personalizada e suporte via WhatsApp. Também temos o programa de 12 meses com virada total da saúde. Oferecemos planos de pagamento parcelados.
+                  </p>
+                </details>
+
+                <details className="group">
+                  <summary className="flex cursor-pointer items-center justify-between font-semibold text-[#344D0E] hover:text-[#76993D] transition">
+                    <span>O tratamento funciona para qualquer tipo de corpo?</span>
+                    <span className="transition group-open:rotate-180">▼</span>
+                  </summary>
+                  <p className="mt-3 text-[#4A5F22] leading-relaxed pl-4 border-l-2 border-[#76993D]">
+                    Sim! Cada tratamento é 100% personalizado baseado em sua avaliação médica, análise hormonal e histórico. Adaptamos para qualquer metabolismo, idade ou condição de saúde.
+                  </p>
+                </details>
+
+                <details className="group">
+                  <summary className="flex cursor-pointer items-center justify-between font-semibold text-[#344D0E] hover:text-[#76993D] transition">
+                    <span>Preciso fazer dieta rigorosa no Tratamento Emagrecimento?</span>
+                    <span className="transition group-open:rotate-180">▼</span>
+                  </summary>
+                  <p className="mt-3 text-[#4A5F22] leading-relaxed pl-4 border-l-2 border-[#76993D]">
+                    Não! Oferecemos uma estratégia alimentar inteligente, não uma dieta restritiva. Você aprende a comer bem, mantém energia e consegue aderir ao programa sem sofrimento.
+                  </p>
+                </details>
+
+                <details className="group">
+                  <summary className="flex cursor-pointer items-center justify-between font-semibold text-[#344D0E] hover:text-[#76993D] transition">
+                    <span>Posso continuar meus treinos normais durante o tratamento?</span>
+                    <span className="transition group-open:rotate-180">▼</span>
+                  </summary>
+                  <p className="mt-3 text-[#4A5F22] leading-relaxed pl-4 border-l-2 border-[#76993D]">
+                    Sim! Na verdade, recomendamos. Nosso educador físico otimiza seus treinos para potencializar resultados. O tratamento se adapta ao seu nível de atividade.
+                  </p>
+                </details>
+              </div>
+            </div>
+
+            {/* Hipertrofia FAQs */}
+            <div className="bg-white rounded-2xl p-6 border border-[#e9eee1] hover:shadow-lg transition">
+              <div className="mb-6">
+                <h3 className="text-2xl font-serif font-bold text-[#76993D] mb-4">Tratamento Hipertrofia</h3>
+              </div>
+              <div className="space-y-3">
+                <details className="group">
+                  <summary className="flex cursor-pointer items-center justify-between font-semibold text-[#344D0E] hover:text-[#76993D] transition">
+                    <span>Quanto tempo leva para ganhar massa muscular com o Tratamento Hipertrofia?</span>
+                    <span className="transition group-open:rotate-180">▼</span>
+                  </summary>
+                  <p className="mt-3 text-[#4A5F22] leading-relaxed pl-4 border-l-2 border-[#76993D]">
+                    Ganhos significativos começam em 4-6 semanas. Nossos pacientes ganham em média 3-5kg de massa magra em 12 semanas, com redução de gordura corporal.
+                  </p>
+                </details>
+
+                <details className="group">
+                  <summary className="flex cursor-pointer items-center justify-between font-semibold text-[#344D0E] hover:text-[#76993D] transition">
+                    <span>Qual é o investimento do Tratamento Hipertrofia?</span>
+                    <span className="transition group-open:rotate-180">▼</span>
+                  </summary>
+                  <p className="mt-3 text-[#4A5F22] leading-relaxed pl-4 border-l-2 border-[#76993D]">
+                    O programa de 12 semanas tem o custo estimado menos que você gastou até hoje com tentativas frustradas, incluindo consultas, análise corporal, prescrição de suplementação otimizada e periodização de treino.
+                  </p>
+                </details>
+
+                <details className="group">
+                  <summary className="flex cursor-pointer items-center justify-between font-semibold text-[#344D0E] hover:text-[#76993D] transition">
+                    <span>Preciso de suplementação cara para o Tratamento Hipertrofia?</span>
+                    <span className="transition group-open:rotate-180">▼</span>
+                  </summary>
+                  <p className="mt-3 text-[#4A5F22] leading-relaxed pl-4 border-l-2 border-[#76993D]">
+                    Não necessariamente. Recomendamos suplementação estratégica (proteína, creatina, BCAA entre outros). Tudo é manipulado e personalizado para seu objetivo.
+                  </p>
+                </details>
+
+                <details className="group">
+                  <summary className="flex cursor-pointer items-center justify-between font-semibold text-[#344D0E] hover:text-[#76993D] transition">
+                    <span>O tratamento inclui prescrição de treino?</span>
+                    <span className="transition group-open:rotate-180">▼</span>
+                  </summary>
+                  <p className="mt-3 text-[#4A5F22] leading-relaxed pl-4 border-l-2 border-[#76993D]">
+                    Sim! Nosso educador físico prescreve treino periodizado específico para hipertrofia, com ajustes semanais baseado em sua evolução e feedback.
+                  </p>
+                </details>
+
+                <details className="group">
+                  <summary className="flex cursor-pointer items-center justify-between font-semibold text-[#344D0E] hover:text-[#76993D] transition">
+                    <span>Posso fazer o Tratamento Hipertrofia se sou iniciante?</span>
+                    <span className="transition group-open:rotate-180">▼</span>
+                  </summary>
+                  <p className="mt-3 text-[#4A5F22] leading-relaxed pl-4 border-l-2 border-[#76993D]">
+                    Absolutamente! Adaptamos para qualquer nível. Iniciantes ganham muito mais rápido (até 8kg em 12 semanas) porque seu corpo responde bem ao estímulo novo.
+                  </p>
+                </details>
+
+                <details className="group">
+                  <summary className="flex cursor-pointer items-center justify-between font-semibold text-[#344D0E] hover:text-[#76993D] transition">
+                    <span>Como funciona o acompanhamento durante o tratamento?</span>
+                    <span className="transition group-open:rotate-180">▼</span>
+                  </summary>
+                  <p className="mt-3 text-[#4A5F22] leading-relaxed pl-4 border-l-2 border-[#76993D]">
+                    Você tem acesso direto via WhatsApp, consultas quinzenais, análises periódicas de composição corporal e ajustes contínuos no programa conforme sua evolução.
+                  </p>
+                </details>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
       {/* CTA Section */}
       <section id="contato" className="py-20">
         <div className="container max-w-4xl">
