@@ -152,76 +152,79 @@ export default function Home() {
       </header>
 
       {/* Hero Section */}
-      <section className="py-20 px-4 md:px-0 relative overflow-hidden" style={{
+      <section className="py-16 md:py-20 px-4 md:px-0 relative overflow-hidden min-h-screen md:min-h-auto" style={{
         backgroundImage: 'url(https://d2xsxph8kpxj0f.cloudfront.net/310519663568685363/cH9bd3vdEswPP279KavXwa/hero_section_with_woman_preview-62xhSiQTRXiRPwHKVuef5k.webp)',
         backgroundSize: 'cover',
         backgroundPosition: 'center right',
         backgroundAttachment: 'fixed'
       }}>
-        {/* Overlay para melhorar legibilidade */}
-        <div className="absolute inset-0 bg-gradient-to-r from-[#f2f6eb] via-[#f2f6eb]/80 to-transparent"></div>
+        {/* Overlay para melhorar legibilidade - ajustado para mobile */}
+        <div className="absolute inset-0 bg-gradient-to-r from-[#f2f6eb] via-[#f2f6eb]/85 md:via-[#f2f6eb]/80 to-transparent md:to-transparent"></div>
 
         {/* Badge de Vagas */}
-        <div className="absolute top-20 right-4 md:right-12 z-20">
-          <div className="inline-flex items-center gap-2 bg-[#76993D] text-white px-4 py-2 rounded-full text-sm font-semibold animate-pulse">
-            <span className="text-lg">⚡</span>
-            Apenas 3 vagas esse mês
+        <div className="absolute top-16 md:top-20 right-3 md:right-12 z-20">
+          <div className="inline-flex items-center gap-2 bg-[#76993D] text-white px-3 md:px-4 py-2 rounded-full text-xs md:text-sm font-semibold animate-pulse">
+            <span className="text-base md:text-lg">⚡</span>
+            <span className="hidden sm:inline">Apenas 3 vagas esse mês</span>
+            <span className="sm:hidden">3 vagas</span>
           </div>
         </div>
 
-        <div className="container max-w-6xl relative z-10">
-          <div className="grid md:grid-cols-2 gap-12 items-center py-12">
+        <div className="container max-w-6xl relative z-10 h-full">
+          <div className="flex flex-col md:grid md:grid-cols-2 gap-8 md:gap-12 items-center justify-center py-12 md:py-12 min-h-screen md:min-h-auto">
             {/* Left Content */}
-            <div className="space-y-8">
-              <div className="space-y-4">
+            <div className="space-y-6 md:space-y-8 w-full">
+              <div className="space-y-3 md:space-y-4">
                 <div className="inline-block">
-                  <span className="text-[#C9A961] font-semibold text-sm tracking-wide uppercase flex items-center gap-2">
+                  <span className="text-[#C9A961] font-semibold text-xs md:text-sm tracking-wide uppercase flex items-center gap-2">
                     <span>👑</span>
-                    Saúde Inteligente. Resultados Reais.
+                    <span className="hidden sm:inline">Saúde Inteligente. Resultados Reais.</span>
+                    <span className="sm:hidden">Saúde Inteligente</span>
                   </span>
                 </div>
-                <h1 className="text-5xl md:text-6xl font-serif font-bold text-[#344D0E] leading-tight">
+                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-[#344D0E] leading-tight">
                   Mulheres de Performance <span className="text-[#76993D]">Escolhem a Saúde Inteligente</span>
                 </h1>
-                <p className="text-xl text-[#4A5F22] leading-relaxed max-w-lg italic">
+                <p className="text-base sm:text-lg md:text-xl text-[#4A5F22] leading-relaxed max-w-lg italic">
                   Otimização hormonal, energia renovada e corpo definido. Para mulheres que não abrem mão de resultados.
                 </p>
               </div>
 
-              <div className="flex flex-col sm:flex-row gap-4">
+              <div className="flex flex-col gap-3 md:gap-4">
                 <Button 
                   onClick={() => handleScheduleClick('Hero')}
-                  className="bg-[#344D0E] hover:bg-[#76993D] text-white rounded-lg px-10 py-6 text-lg font-bold flex items-center gap-3 shadow-lg hover:shadow-xl transition-all transform hover:scale-105"
+                  className="bg-[#344D0E] hover:bg-[#76993D] text-white rounded-lg px-6 md:px-10 py-4 md:py-6 text-sm md:text-lg font-bold flex items-center justify-center gap-2 md:gap-3 shadow-lg hover:shadow-xl transition-all transform hover:scale-105 w-full md:w-auto"
                 >
-                  ✨ Transformar Minha Performance
-                  <ArrowRight className="w-5 h-5" />
+                  ✨ <span className="hidden sm:inline">Transformar Minha Performance</span>
+                  <span className="sm:hidden">Transformar</span>
+                  <ArrowRight className="w-4 md:w-5 h-4 md:h-5" />
                 </Button>
                 <Button
                   variant="outline"
-                  className="border-2 border-[#76993D] text-[#76993D] hover:bg-[#f2f6eb] rounded-lg px-8 py-5 text-lg font-semibold"
+                  className="border-2 border-[#76993D] text-[#76993D] hover:bg-[#f2f6eb] rounded-lg px-6 md:px-8 py-4 md:py-5 text-sm md:text-lg font-semibold w-full md:w-auto"
                   onClick={() => handleMethodClick('Hero')}
                 >
                   Ver Detalhes do Método
                 </Button>
               </div>
 
-              {/* Stats */}
-              <div className="grid grid-cols-4 gap-4 pt-8">
+              {/* Stats - ajustado para mobile */}
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4 pt-6 md:pt-8">
                 <div className="text-center">
-                  <div className="text-2xl font-bold text-[#C9A961]">360°</div>
-                  <p className="text-xs text-[#4A5F22] font-semibold">Abordagem Completa</p>
+                  <div className="text-xl md:text-2xl font-bold text-[#C9A961]">360°</div>
+                  <p className="text-xs md:text-xs text-[#4A5F22] font-semibold leading-tight">Abordagem Completa</p>
                 </div>
                 <div className="text-center">
-                  <div className="text-2xl font-bold text-[#C9A961]">📊</div>
-                  <p className="text-xs text-[#4A5F22] font-semibold">Resultados Comprovados</p>
+                  <div className="text-xl md:text-2xl font-bold text-[#C9A961]">📊</div>
+                  <p className="text-xs md:text-xs text-[#4A5F22] font-semibold leading-tight">Resultados Comprovados</p>
                 </div>
                 <div className="text-center">
-                  <div className="text-2xl font-bold text-[#C9A961]">👤</div>
-                  <p className="text-xs text-[#4A5F22] font-semibold">Suporte Premium</p>
+                  <div className="text-xl md:text-2xl font-bold text-[#C9A961]">👤</div>
+                  <p className="text-xs md:text-xs text-[#4A5F22] font-semibold leading-tight">Suporte Premium</p>
                 </div>
                 <div className="text-center">
-                  <div className="text-2xl font-bold text-[#C9A961]">👑</div>
-                  <p className="text-xs text-[#4A5F22] font-semibold">Exclusivo</p>
+                  <div className="text-xl md:text-2xl font-bold text-[#C9A961]">👑</div>
+                  <p className="text-xs md:text-xs text-[#4A5F22] font-semibold leading-tight">Exclusivo</p>
                 </div>
               </div>
             </div>
