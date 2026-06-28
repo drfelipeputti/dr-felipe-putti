@@ -172,10 +172,10 @@ export default function Home() {
                   </span>
                 </div>
                 <h1 className="text-5xl md:text-6xl font-serif font-bold text-[#344D0E] leading-tight">
-                  Transforme seu Corpo e <span className="text-[#76993D]">Recupere sua Energia</span>
+                  Mulheres de Performance <span className="text-[#76993D]">Escolhem a Saúde Inteligente</span>
                 </h1>
                 <p className="text-xl text-[#4A5F22] leading-relaxed max-w-lg">
-                  Emagrecimento premium e otimização hormonal para mulheres que buscam performance e bem-estar sem sofrimento.
+                  Otimização hormonal, energia renovada e corpo definido. Para mulheres que não abrem mão de resultados.
                 </p>
               </div>
 
@@ -184,7 +184,7 @@ export default function Home() {
                   onClick={() => handleScheduleClick('Hero')}
                   className="bg-[#76993D] hover:bg-[#344D0E] text-white rounded-full px-10 py-8 text-2xl font-bold flex items-center gap-3 animate-pulse shadow-2xl hover:shadow-2xl transition-all transform hover:scale-105"
                 >
-                  🔥 Quero Transformar Minha Saúde
+                  ✨ Transformar Minha Performance
                   <ArrowRight className="w-7 h-7" />
                 </Button>
                 <Button
