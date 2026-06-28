@@ -152,29 +152,38 @@ export default function Home() {
       </header>
 
       {/* Hero Section */}
-      <section className="pt-32 pb-20 px-4 md:px-0 relative">
+      <section className="py-20 px-4 md:px-0 relative overflow-hidden" style={{
+        backgroundImage: 'url(https://d2xsxph8kpxj0f.cloudfront.net/310519663568685363/cH9bd3vdEswPP279KavXwa/hero_section_with_woman_preview-62xhSiQTRXiRPwHKVuef5k.webp)',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center right',
+        backgroundAttachment: 'fixed'
+      }}>
+        {/* Overlay para melhorar legibilidade */}
+        <div className="absolute inset-0 bg-gradient-to-r from-[#f2f6eb] via-[#f2f6eb]/80 to-transparent"></div>
+
         {/* Badge de Vagas */}
-        <div className="absolute top-40 right-4 md:right-12">
+        <div className="absolute top-20 right-4 md:right-12 z-20">
           <div className="inline-flex items-center gap-2 bg-[#76993D] text-white px-4 py-2 rounded-full text-sm font-semibold animate-pulse">
             <span className="text-lg">⚡</span>
             Apenas 3 vagas esse mês
           </div>
         </div>
 
-        <div className="container max-w-6xl">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
+        <div className="container max-w-6xl relative z-10">
+          <div className="grid md:grid-cols-2 gap-12 items-center py-12">
             {/* Left Content */}
             <div className="space-y-8">
               <div className="space-y-4">
                 <div className="inline-block">
-                  <span className="text-[#76993D] font-semibold text-sm tracking-wide uppercase">
-                    Medicina Esportiva & Performance
+                  <span className="text-[#C9A961] font-semibold text-sm tracking-wide uppercase flex items-center gap-2">
+                    <span>👑</span>
+                    Saúde Inteligente. Resultados Reais.
                   </span>
                 </div>
                 <h1 className="text-5xl md:text-6xl font-serif font-bold text-[#344D0E] leading-tight">
                   Mulheres de Performance <span className="text-[#76993D]">Escolhem a Saúde Inteligente</span>
                 </h1>
-                <p className="text-xl text-[#4A5F22] leading-relaxed max-w-lg">
+                <p className="text-xl text-[#4A5F22] leading-relaxed max-w-lg italic">
                   Otimização hormonal, energia renovada e corpo definido. Para mulheres que não abrem mão de resultados.
                 </p>
               </div>
@@ -182,14 +191,14 @@ export default function Home() {
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button 
                   onClick={() => handleScheduleClick('Hero')}
-                  className="bg-[#76993D] hover:bg-[#344D0E] text-white rounded-full px-10 py-8 text-2xl font-bold flex items-center gap-3 animate-pulse shadow-2xl hover:shadow-2xl transition-all transform hover:scale-105"
+                  className="bg-[#344D0E] hover:bg-[#76993D] text-white rounded-lg px-10 py-6 text-lg font-bold flex items-center gap-3 shadow-lg hover:shadow-xl transition-all transform hover:scale-105"
                 >
                   ✨ Transformar Minha Performance
-                  <ArrowRight className="w-7 h-7" />
+                  <ArrowRight className="w-5 h-5" />
                 </Button>
                 <Button
                   variant="outline"
-                  className="border-2 border-[#76993D] text-[#76993D] hover:bg-[#f2f6eb] rounded-full px-8 py-6 text-lg"
+                  className="border-2 border-[#76993D] text-[#76993D] hover:bg-[#f2f6eb] rounded-lg px-8 py-5 text-lg font-semibold"
                   onClick={() => handleMethodClick('Hero')}
                 >
                   Ver Detalhes do Método
@@ -197,23 +206,28 @@ export default function Home() {
               </div>
 
               {/* Stats */}
-              <div className="grid grid-cols-3 gap-6 pt-8 border-t border-[#e9eee1]">
-                <div>
-                  <div className="text-3xl font-bold text-[#76993D]">12+</div>
-                  <p className="text-sm text-[#4A5F22]">Anos de Atuação</p>
+              <div className="grid grid-cols-4 gap-4 pt-8">
+                <div className="text-center">
+                  <div className="text-2xl font-bold text-[#C9A961]">360°</div>
+                  <p className="text-xs text-[#4A5F22] font-semibold">Abordagem Completa</p>
                 </div>
-                <div>
-                  <div className="text-3xl font-bold text-[#76993D]">+1000</div>
-                  <p className="text-sm text-[#4A5F22]">Pacientes por Ano</p>
+                <div className="text-center">
+                  <div className="text-2xl font-bold text-[#C9A961]">📊</div>
+                  <p className="text-xs text-[#4A5F22] font-semibold">Resultados Comprovados</p>
                 </div>
-                <div>
-                  <div className="text-3xl font-bold text-[#76993D]">3</div>
-                  <p className="text-sm text-[#4A5F22]">Áreas de Atuação</p>
+                <div className="text-center">
+                  <div className="text-2xl font-bold text-[#C9A961]">👤</div>
+                  <p className="text-xs text-[#4A5F22] font-semibold">Suporte Premium</p>
+                </div>
+                <div className="text-center">
+                  <div className="text-2xl font-bold text-[#C9A961]">👑</div>
+                  <p className="text-xs text-[#4A5F22] font-semibold">Exclusivo</p>
                 </div>
               </div>
             </div>
 
-
+            {/* Right side - Image (handled by background) */}
+            <div className="hidden md:block"></div>
           </div>
         </div>
       </section>
